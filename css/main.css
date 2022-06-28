@@ -68,11 +68,9 @@ ul {
 }
 
 .container {
-  width: 100%;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  /*outline: 1px solid red;*/
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -749,17 +747,16 @@ ul {
 }
 
 .hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: #c4c4c4;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/team.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/team.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 767px;
   /*margin: 0 auto;*/
-}
-@media screen and (min-width: 480px) {
-  .hero {
-    padding-top: 118px;
-    padding-bottom: 118px;
-    max-width: 767px;
-  }
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -779,25 +776,21 @@ ul {
 }
 
 .hero__title {
+  max-width: 360px;
   margin-bottom: 30px;
-}
-@media screen and (min-width: 480px) {
-  .hero__title {
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.615;
-    letter-spacing: 0.06em;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--color-text-contrast);
-  }
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.615;
+  letter-spacing: 0.06em;
+  color: var(--color-text-contrast);
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
-    font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    letter-spacing: 0.06em;
+    max-width: 696px;
   }
 }
 
@@ -806,25 +799,27 @@ ul {
   padding-bottom: var(--typical-padding-ident);
 }
 
-.benefits__label {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
 .benefits__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
 }
 
 .benefits__item {
-  width: 270px;
+  width: 100%;
 }
-.benefits__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .benefits__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .benefits__wrap-icon {
@@ -842,6 +837,14 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 30px;
+}
+
+.benefits__label {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
 }
 
 .benefits__text {
