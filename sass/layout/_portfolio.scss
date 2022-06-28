@@ -1,6 +1,10 @@
 .portfolio {
   @include typicalPadding(60px, 60px);
 
+  @include desktop {
+    @include typicalPadding(94px, 94px);
+  }
+
   background-color: var(--color-bg-main);
 }
 

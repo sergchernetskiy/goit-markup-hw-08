@@ -152,18 +152,19 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 50px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .filter {
+    margin-bottom: 50px;
+  }
 }
 .filter:focus-visible {
   outline: 1px solid #188ce8;
   border-radius: 4px;
-}
-
-.filter__item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .filter__btn {
@@ -942,35 +943,56 @@ ul {
 }
 
 .clients {
-  padding-top: var(--typical-padding-ident);
-  padding-bottom: var(--typical-padding-ident);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--color-bg-light);
   background-color: var(--color-bg-main);
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    margin-bottom: 50px;
+  }
 }
 
 .clients__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
 }
 
 .clients__item {
-  width: 170px;
+  width: calc((100% - 30px) / 2);
   height: 92px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border: 1px solid var(--color-icon);
   border-radius: 4px;
-  margin-right: 30px;
   -webkit-transition: border 250ms var(--timing-function);
   transition: border 250ms var(--timing-function);
 }
-.clients__item:last-child {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 .clients__item:hover, .clients__item:focus {
   border: 1px solid var(--color-bg-accent);
@@ -1141,6 +1163,12 @@ ul {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--color-bg-main);
+}
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .gallery {
