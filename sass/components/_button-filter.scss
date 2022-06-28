@@ -6,6 +6,7 @@
 
   @include tablet {
     margin-bottom: 50px;
+    justify-content: center;
   }
 
   &:focus-visible {
@@ -18,7 +19,6 @@
   border-radius: 4px;
   border: none;
   padding: 6px 22px;
-  margin: 0 auto;
 
   font-family: inherit;
   @include font(null, 16px, 1.63, null);
