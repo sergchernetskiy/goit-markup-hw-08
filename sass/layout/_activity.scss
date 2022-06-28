@@ -1,33 +1,33 @@
 .activity {
-   padding-bottom: var(--typical-padding-ident);
+  padding-bottom: var(--typical-padding-ident);
 }
 
 .activity__title {
-   margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .activity__list {
-   display: flex;
-   margin: -15px;
+  display: flex;
+  margin: -15px;
 }
 
 .activity__item {
-   margin: 15px;
-   position: relative;
+  margin: 15px;
+  position: relative;
 }
 
 .activity__label {
-   position: absolute;
-   width: 100%;
-   height: 70px;
-   left: 0;
-   bottom: 0;
-   padding-top: 27px;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  left: 0;
+  bottom: 0;
+  padding-top: 27px;
 
-   color: var(--color-text-contrast);
-   background-color: rgba(47, 48, 58, 0.8);
+  color: var(--color-text-contrast);
+  background-color: rgba(47, 48, 58, 0.8);
 
-   @include font(700, 14px, 1.143, null);
-   text-align: center;
-   text-transform: uppercase;
+  @include font(700, 14px, 1.143, null);
+  text-align: center;
+  text-transform: uppercase;
 }

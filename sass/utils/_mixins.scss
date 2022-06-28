@@ -1,35 +1,35 @@
 @mixin centeredFlex($flex, $ai, $jc) {
-   display: $flex;
-   align-items: $ai;
-   justify-content: $jc;
+  display: $flex;
+  align-items: $ai;
+  justify-content: $jc;
 }
 
 @mixin font($fw, $fs, $lh, $ls) {
-   font-weight: $fw;
-   font-size: $fs;
-   line-height: $lh;
-   letter-spacing: $ls;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
 }
 
-@mixin typicalPadding() {
-   padding-top: var(--typical-padding-ident);
-   padding-bottom: var(--typical-padding-ident);
+@mixin typicalPadding($pt, $pb) {
+  padding-top: $pt;
+  padding-bottom: $pb;
 }
 
 @mixin mobile {
-   @media screen and (min-width: 480px) {
-      @content;
-   }
+  @media screen and (min-width: 480px) {
+    @content;
+  }
 }
 
 @mixin tablet {
-   @media screen and (min-width: 768px) {
-      @content;
-   }
+  @media screen and (min-width: 768px) {
+    @content;
+  }
 }
 
 @mixin desktop {
-   @media screen and (min-width: 1200px) {
-      @content;
-   }
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
 }

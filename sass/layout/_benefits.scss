@@ -1,5 +1,5 @@
 .benefits {
-  @include typicalPadding();
+  @include typicalPadding(60px, 60px);
 }
 
 .benefits__title {
@@ -14,9 +14,11 @@
 
 .benefits__item {
   width: 100%;
+
   @include tablet {
     width: calc((100% - 30px) / 2);
   }
+
   @include desktop {
     width: calc((100% - 90px) / 4);
   }
@@ -36,7 +38,12 @@
   margin-bottom: 10px;
 
   @include font(700, 14px, 1.14, null);
+  text-align: center;
   text-transform: uppercase;
+
+  @include tablet {
+    text-align: left;
+  }
 }
 
 .benefits__text {

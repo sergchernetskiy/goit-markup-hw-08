@@ -1,13 +1,23 @@
 .team {
-   @include typicalPadding;
+  @include typicalPadding(60px, 60px);
 
-   background-color: var(--color-bg-light);
+  background-color: var(--color-bg-light);
+
+  @include desktop {
+    @include typicalPadding(94px, 94px);
+  }
 }
 
 .team__title {
-   margin-bottom: 50px;
+  margin-bottom: 30px;
+
+  @include desktop {
+    margin-bottom: 50px;
+  }
 }
 
 .team__list {
-   display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }

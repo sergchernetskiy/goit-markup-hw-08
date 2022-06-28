@@ -1,29 +1,39 @@
 .personal-card {
-   background: var(--color-bg-main);
-   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-      0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-   border-radius: 0px 0px 4px 4px;
+  width: 100%;
+  background: var(--color-bg-main);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 
-   &:not(:last-child) {
-      margin-right: 30px;
-   }
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .personal-card__ident {
-   padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 24px;
+
+  @include desktop {
+    padding-bottom: 30px;
+  }
 }
 
 .personal-card__surname {
-   margin-bottom: 10px;
+  margin-bottom: 10px;
 
-   @include font(null, 16px, 1.19, null);
-   text-align: center;
+  @include font(null, 16px, 1.19, null);
+  text-align: center;
 }
 
 .personal-card__position {
-   @include font(400, 16px, 1.19, null);
-   text-align: center;
-   margin-bottom: 16px;
+  @include font(400, 16px, 1.19, null);
+  text-align: center;
+  margin-bottom: 16px;
 
-   color: var(--color-text-secondary);
+  color: var(--color-text-secondary);
 }

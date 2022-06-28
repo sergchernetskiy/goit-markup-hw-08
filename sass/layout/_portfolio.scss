@@ -1,9 +1,9 @@
 .portfolio {
-   @include typicalPadding;
+  @include typicalPadding(60px, 60px);
 
-   background-color: var(--color-bg-main);
+  background-color: var(--color-bg-main);
 }
 
 .portfolio__title {
-   @extend %is-hidden;
+  @extend %is-hidden;
 }
