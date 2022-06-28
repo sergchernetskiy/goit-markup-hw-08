@@ -1,0 +1,74 @@
+.sub-field {
+   position: relative;
+}
+
+.sub-input {
+   position: absolute;
+   width: 358px;
+   height: 50px;
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   border-radius: 4px;
+   background-color: var(--secondary-background-one);
+   padding: 15px 16px;
+   color: var(--color-text-contrast);
+
+   transform: translateY(20px);
+
+   &:focus-visible {
+      outline: 2px solid var(--color-bg-accent);
+      border-radius: 4px;
+   }
+}
+
+.sub-label {
+   position: absolute;
+   top: 35px;
+   left: 16px;
+
+   @include font(400, 16px, 1.25, null);
+   color: rgba(255, 255, 255, 0.6);
+}
+
+.sub-btn {
+   position: absolute;
+   top: 20px;
+   left: 370px;
+   @include centeredFlex(flex, center, null);
+
+   background-color: var(--color-bg-accent);
+   border: 2px solid var(--color-text-accent);
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   border-radius: 4px;
+   margin: 0 auto;
+   padding: 8px 28px 8px 29px;
+
+   font-family: inherit;
+   @include font(700, 16px, 1.88, 0.06em);
+   color: var(--color-text-contrast);
+
+   cursor: pointer;
+
+   transition: color 250ms var(--timing-function),
+      shadow 250ms var(--timing-function);
+
+   &:hover,
+   &:focus {
+      background: #188ce8;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+   }
+
+   &:focus-visible {
+      outline: 1px solid #188ce8;
+      border-radius: 4px;
+   }
+
+   &::after {
+      content: "";
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
+      background-image: url(../images/icon-send.svg);
+      background-size: contain;
+   }
+}

@@ -1,0 +1,34 @@
+.logo {
+   font-family: "Raleway", sans-serif;
+   @include font(700, 26px, 1.19, null);
+   color: var(--color-text-accent);
+
+   text-decoration: none;
+
+   &:focus-visible {
+      outline: 2px solid var(--color-bg-accent);
+      border-radius: 4px;
+   }
+}
+
+.logo__active {
+   color: var(--color-text-title);
+
+   transition: color 250ms var(--timing-function);
+
+   &:hover,
+   &:focus {
+      color: var(--color-text-accent);
+   }
+}
+
+.logo__inverse {
+   color: var(--color-text-contrast);
+
+   transition: color 250ms var(--timing-function);
+
+   &:hover,
+   &:focus {
+      color: var(--color-text-accent);
+   }
+}

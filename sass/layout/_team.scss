@@ -1,0 +1,13 @@
+.team {
+   @include typicalPadding;
+
+   background-color: var(--color-bg-light);
+}
+
+.team__title {
+   margin-bottom: 50px;
+}
+
+.team__list {
+   display: flex;
+}

@@ -1,0 +1,24 @@
+.modal__btn-close {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+
+   @include centeredFlex(flex, center, center);
+   padding: 6px;
+
+   background-color: transparent;
+   border: 1px solid var(--color-bg-accent);
+   border-radius: 50%;
+
+   cursor: pointer;
+
+   transition: shadow 250ms var(--timing-function),
+      background-color 250ms var(--timing-function),
+      fill 250ms var(--timing-function) 250ms;
+
+   &:hover,
+   &:focus {
+      background-color: yellowgreen;
+      fill: var(--color-bg-accent);
+   }
+}

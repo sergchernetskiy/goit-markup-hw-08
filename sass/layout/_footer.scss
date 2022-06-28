@@ -1,0 +1,98 @@
+.footer {
+   padding-top: 60px;
+   padding-bottom: 60px;
+
+   background-color: var(--color-bg-dark);
+}
+
+.footer__information {
+   @include centeredFlex(flex, baseline, null);
+}
+
+.footer__link:hover,
+.footer__link:focus {
+   color: var(--color-text-accent);
+
+   &:focus-visible {
+      outline: 2px solid var(--color-bg-accent);
+      border-radius: 4px;
+   }
+}
+
+.footer__address {
+   margin-right: 70px;
+   margin-bottom: 9px;
+   width: 231px;
+
+   @include font(400, 14px, 2, null);
+   color: var(--color-text-contrast);
+}
+
+.footer__link {
+   @include font(null, 14px, 2, null);
+   color: rgba(255, 255, 255, 0.6);
+
+   @extend %link;
+
+   transition: color 250ms var(--timing-function);
+}
+
+.footer__mail {
+   display: inline-block;
+   margin-bottom: 9px;
+}
+
+.message,
+.sub-title {
+   padding-bottom: 20px;
+
+   @include font(700, 14px, 1.143, null);
+   text-transform: uppercase;
+   color: var(--color-text-contrast);
+}
+
+.footer-soc-list {
+   display: flex;
+   justify-content: center;
+   margin-right: 93px;
+}
+
+.footer-soc-item {
+   width: 44px;
+   height: 44px;
+   margin-right: 10px;
+
+   &:last-child {
+      margin-right: 0;
+   }
+}
+
+.footer-soc-item > .footer-soc-link {
+   width: 100%;
+   height: 100%;
+   @include centeredFlex(flex, center, center);
+   border-radius: 50%;
+   background-color: rgba(255, 255, 255, 0.1);
+   fill: var(--color-text-contrast);
+
+   transition: background-color 250ms var(--timing-function);
+}
+
+.footer-soc-icon {
+   color: var(--color-text-contrast);
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+   background-color: var(--color-bg-accent);
+}
+
+.footer-soc-link:hover .footer-soc-icon,
+.footer-soc-link:focus .footer-soc-icon {
+   fill: var(--color-text-contrast);
+}
+
+.footer-soc-link:focus-visible {
+   outline: 2px solid var(--color-bg-accent);
+   border-radius: 4px;
+}

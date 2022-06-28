@@ -1,0 +1,13 @@
+.header {
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-bottom-color: #ececec;
+
+   .container {
+      @include centeredFlex(flex, center, null);
+   }
+}
+
+.header__menu {
+   @include centeredFlex(flex, center, null);
+}

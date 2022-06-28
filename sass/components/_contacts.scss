@@ -1,0 +1,36 @@
+.contacts {
+   display: flex;
+   margin-left: auto;
+}
+
+.contacts__link {
+   @include centeredFlex(flex, center, null);
+   padding: 32px 0;
+
+   @extend %link;
+   color: var(--color-text-secondary);
+
+   @include font(null, 14px, 1.14, 0.02em);
+
+   transition: color 250ms var(--timing-function);
+
+   &:hover,
+   &:focus {
+      color: var(--color-text-accent);
+   }
+
+   &:focus-visible {
+      outline: 2px solid var(--color-bg-accent);
+      border-radius: 4px;
+   }
+}
+
+.contacts__envelope,
+.contacts__smartphone {
+   fill: currentColor;
+   margin-right: 10px;
+}
+
+.contacts__item:not(:last-child) {
+   margin-right: 50px;
+}

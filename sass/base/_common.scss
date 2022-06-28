@@ -1,0 +1,10 @@
+body {
+   font-family: var(--font-main);
+   @include font(500, 14px, 1.14, 0.03em);
+   /*font-weight: 500;
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: 0.03em;*/
+   background-color: var(--color-bg-main);
+   color: var(--color-text-primary);
+}
