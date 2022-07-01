@@ -1,74 +1,105 @@
+.sub {
+  text-align: center;
+}
+
+.sub-title {
+  padding-bottom: 20px;
+
+  @include font(700, 14px, 1.143, null);
+  color: var(--color-text-contrast);
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .sub-field {
-   position: relative;
+  position: relative;
 }
 
 .sub-input {
-   position: absolute;
-   width: 358px;
-   height: 50px;
-   border: 1px solid rgba(255, 255, 255, 0.3);
-   border-radius: 4px;
-   background-color: var(--secondary-background-one);
-   padding: 15px 16px;
-   color: var(--color-text-contrast);
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: var(--secondary-background-one);
+  padding: 15px 16px;
+  color: var(--color-text-contrast);
 
-   transform: translateY(20px);
+  transform: translateY(20px);
 
-   &:focus-visible {
-      outline: 2px solid var(--color-bg-accent);
-      border-radius: 4px;
-   }
+  @include tablet {
+    width: 358px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+  }
+  @include desktop {
+    top: 50%;
+    left: 82%;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-bg-accent);
+    border-radius: 4px;
+  }
 }
 
 .sub-label {
-   position: absolute;
-   top: 35px;
-   left: 16px;
+  position: absolute;
+  top: 35px;
+  left: 16px;
 
-   @include font(400, 16px, 1.25, null);
-   color: rgba(255, 255, 255, 0.6);
+  @include font(400, 16px, 1.25, null);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .sub-btn {
-   position: absolute;
-   top: 20px;
-   left: 370px;
-   @include centeredFlex(flex, center, null);
+  position: relative;
+  top: 90px;
 
-   background-color: var(--color-bg-accent);
-   border: 2px solid var(--color-text-accent);
-   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-   border-radius: 4px;
-   margin: 0 auto;
-   padding: 8px 28px 8px 29px;
+  background-color: var(--color-bg-accent);
+  border: 2px solid var(--color-text-accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin: 0 auto;
+  padding: 8px 60px 8px 29px;
 
-   font-family: inherit;
-   @include font(700, 16px, 1.88, 0.06em);
-   color: var(--color-text-contrast);
+  font-family: inherit;
+  @include font(700, 16px, 1.88, 0.06em);
+  color: var(--color-text-contrast);
 
-   cursor: pointer;
+  cursor: pointer;
 
-   transition: color 250ms var(--timing-function),
-      shadow 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function),
+    shadow 250ms var(--timing-function);
 
-   &:hover,
-   &:focus {
-      background: #188ce8;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-      border-radius: 4px;
-   }
+  @include desktop {
+    top: 18px;
+    left: 360px;
+  }
 
-   &:focus-visible {
-      outline: 1px solid #188ce8;
-      border-radius: 4px;
-   }
+  &:hover,
+  &:focus {
+    background: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
 
-   &::after {
-      content: "";
-      width: 24px;
-      height: 24px;
-      margin-left: 10px;
-      background-image: url(../images/icon-send.svg);
-      background-size: contain;
-   }
+  &:focus-visible {
+    outline: 1px solid #188ce8;
+    border-radius: 4px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 10px;
+    margin-left: 10px;
+    background-image: url(../images/icon-send.svg);
+    background-size: contain;
+  }
 }

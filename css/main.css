@@ -444,14 +444,30 @@ ul {
   fill: var(--color-text-contrast);
 }
 
+.sub {
+  text-align: center;
+}
+
+.sub-title {
+  padding-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  color: var(--color-text-contrast);
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .sub-field {
   position: relative;
 }
 
 .sub-input {
   position: absolute;
-  width: 358px;
+  width: 100%;
   height: 50px;
+  top: 0;
+  left: 0;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: var(--secondary-background-one);
@@ -459,6 +475,21 @@ ul {
   color: var(--color-text-contrast);
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
+}
+@media screen and (min-width: 768px) {
+  .sub-input {
+    width: 358px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -15%);
+            transform: translate(-50%, -15%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sub-input {
+    top: 50%;
+    left: 82%;
+  }
 }
 .sub-input:focus-visible {
   outline: 2px solid var(--color-bg-accent);
@@ -476,22 +507,15 @@ ul {
 }
 
 .sub-btn {
-  position: absolute;
-  top: 20px;
-  left: 370px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
+  top: 90px;
   background-color: var(--color-bg-accent);
   border: 2px solid var(--color-text-accent);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   margin: 0 auto;
-  padding: 8px 28px 8px 29px;
+  padding: 8px 60px 8px 29px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -501,6 +525,12 @@ ul {
   cursor: pointer;
   -webkit-transition: color 250ms var(--timing-function), shadow 250ms var(--timing-function);
   transition: color 250ms var(--timing-function), shadow 250ms var(--timing-function);
+}
+@media screen and (min-width: 1200px) {
+  .sub-btn {
+    top: 18px;
+    left: 360px;
+  }
 }
 .sub-btn:hover, .sub-btn:focus {
   background: #188ce8;
@@ -514,8 +544,10 @@ ul {
 }
 .sub-btn::after {
   content: "";
+  position: absolute;
   width: 24px;
   height: 24px;
+  top: 10px;
   margin-left: 10px;
   background-image: url(../images/icon-send.svg);
   background-size: contain;
@@ -1066,17 +1098,64 @@ ul {
 
 .footer {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 150px;
   background-color: var(--color-bg-dark);
 }
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
 
-.footer__information {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+@media screen and (min-width: 768px) {
+  .footer__container-small {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.footer__contacts {
+  margin-bottom: 60px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__contacts {
+    margin-bottom: 0;
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .footer__information {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 .footer__link:hover,
@@ -1090,13 +1169,21 @@ ul {
 }
 
 .footer__address {
-  margin-right: 70px;
-  margin-bottom: 9px;
-  width: 231px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  text-align: center;
   font-weight: 400;
   font-size: 14px;
   line-height: 2;
   color: var(--color-text-contrast);
+}
+@media screen and (min-width: 1200px) {
+  .footer__address {
+    width: 231px;
+    margin-right: 70px;
+    margin-bottom: 9px;
+    text-align: start;
+  }
 }
 
 .footer__link {
@@ -1109,39 +1196,62 @@ ul {
 
 .footer__mail {
   display: inline-block;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .footer__mail {
+    margin-bottom: 9px;
+  }
 }
 
-.message,
-.sub-title {
+.footer-soc {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-soc {
+    margin-bottom: 0;
+  }
+}
+
+.footer-soc__message {
   padding-bottom: 20px;
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.143;
   text-transform: uppercase;
   color: var(--color-text-contrast);
 }
+@media screen and (min-width: 1200px) {
+  .footer-soc__message {
+    text-align: start;
+  }
+}
 
-.footer-soc-list {
+.footer-soc__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 93px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-soc__list {
+    margin-right: 93px;
+  }
 }
 
-.footer-soc-item {
+.footer-soc__item {
   width: 44px;
   height: 44px;
   margin-right: 10px;
 }
-.footer-soc-item:last-child {
+.footer-soc__item:last-child {
   margin-right: 0;
 }
 
-.footer-soc-item > .footer-soc-link {
+.footer-soc__item > .footer-soc__link {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -1160,21 +1270,21 @@ ul {
   transition: background-color 250ms var(--timing-function);
 }
 
-.footer-soc-icon {
+.footer-soc__icon {
   color: var(--color-text-contrast);
 }
 
-.footer-soc-link:hover,
-.footer-soc-link:focus {
+.footer-soc__link:hover,
+.footer-soc__link:focus {
   background-color: var(--color-bg-accent);
 }
 
-.footer-soc-link:hover .footer-soc-icon,
-.footer-soc-link:focus .footer-soc-icon {
+.footer-soc__link:hover .footer-soc__icon,
+.footer-soc__link:focus .footer-soc__icon {
   fill: var(--color-text-contrast);
 }
 
-.footer-soc-link:focus-visible {
+.footer-soc__link:focus-visible {
   outline: 2px solid var(--color-bg-accent);
   border-radius: 4px;
 }
