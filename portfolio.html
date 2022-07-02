@@ -34,6 +34,23 @@
           <a href="./index.html" class="logo"
             >Web<span class="logo__active">Studio</span></a
           >
+          <button
+            type="button"
+            class="menu__toggle js-open-menu is-open"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                href="./images/icons.svg#mob-menu"
+                class="mob-menu__icon"
+              ></use>
+            </svg>
+          </button>
           <ul class="site-nav list">
             <li class="site-nav__item">
               <a href="./index.html" class="site-nav__link">Студия</a>
@@ -78,6 +95,76 @@
 
     <!-- Unique page content -->
     <main>
+      <div class="mob-menu__container js-menu-container" id="mobile-menu">
+        <button
+          type="button"
+          class="menu__toggle js-close-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              href="./images/icons.svg#mob-menu-close"
+              class="mob-menu__icon-close"
+            ></use>
+          </svg>
+        </button>
+        <div class="mob-menu__top">
+          <ul class="mob-nav list">
+            <li class="mob-nav__item">
+              <a href="./index.html" class="mob-nav__link link">Студия</a>
+            </li>
+            <li class="mob-nav__item">
+              <a
+                href="./portfolio.html"
+                class="mob-nav__link link mob-nav__current"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mob-nav__item">
+              <a href="./contacts.html" class="mob-nav__link link"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mob-menu__top">
+          <ul class="mob-contacts">
+            <li class="mob-contacts__item">
+              <a
+                href="tel:+380961111111"
+                class="mob-contacts__link-tel link"
+                >+380 96 111 1111</a
+              >
+            </li>
+            <li class="mob-contacts__item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mob-contacts__link-mail link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="social-mob__list">
+            <li class="social-mob__item">
+              <a href="/" class="social-mob__link link">Instagram</a>
+            </li>
+            <li class="social-mob__item">
+              <a href="/" class="social-mob__link link">Twitter</a>
+            </li>
+            <li class="social-mob__item">
+              <a href="/" class="social-mob__link link">Facebook</a>
+            </li>
+            <li class="social-mob__item">
+              <a href="/" class="social-mob__link link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <section class="portfolio">
         <div class="container">
           <h1 class="portfolio__title">Портфолио</h1>
@@ -327,5 +414,12 @@
         </div>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
