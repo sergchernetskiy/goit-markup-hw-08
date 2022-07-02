@@ -948,6 +948,13 @@ ul {
           align-items: center;
 }
 
+.mob-menu {
+  -webkit-transition: -webkit-transform 250ms var(--timing-function);
+  transition: -webkit-transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
+}
+
 .mob-menu__container {
   position: fixed;
   top: 0;
@@ -970,7 +977,7 @@ ul {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
 }
-@media screen and (min-width: 480px) {
+@media (min-width: 768px) {
   .mob-menu__container {
     display: none;
   }

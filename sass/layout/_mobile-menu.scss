@@ -1,3 +1,6 @@
+.mob-menu {
+  transition: transform 250ms var(--timing-function);
+}
 .mob-menu__container {
   position: fixed;
   top: 0;
@@ -15,7 +18,7 @@
 
   transform: translateY(100%);
 
-  @include mobile {
+  @media (min-width: 768px) {
     display: none;
   }
 }
