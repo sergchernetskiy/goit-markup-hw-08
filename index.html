@@ -91,7 +91,6 @@
         </ul>
       </div>
     </header>
-
     <!-- Unique page content -->
     <main>
       <section class="mob-menu">
@@ -261,36 +260,77 @@
         </div>
       </section>
       <!-- What we do -->
-      <!--<section class="activity">
-            <div class="container">
-               <h2 class="activity__title title">Чем мы занимаемся</h2>
-               <ul class="activity__list">
-                  <li class="activity__item">
-                     <img src="./images/box1.jpg" alt="box1" width="370" />
-                     <h3 class="activity__label">Десктопные приложения</h3>
-                  </li>
-                  <li class="activity__item">
-                     <img src="./images/box2.jpg" alt="box2" width="370" />
-                     <h3 class="activity__label">Мобильные приложения</h3>
-                  </li>
-                  <li class="activity__item">
-                     <img src="./images/box3.jpg" alt="box3" width="370" />
-                     <h3 class="activity__label">Дизайнерские решения</h3>
-                  </li>
-               </ul>
-            </div>
-         </section>-->
+      <section class="activity">
+        <div class="container">
+          <h2 class="activity__title title">Чем мы занимаемся</h2>
+          <ul class="activity__list">
+            <li class="activity__item">
+              <picture>
+                <source
+                  srcset="./images/box1.jpg 1x, ./images/box1-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/box1.jpg" alt="box1" width="370" />
+              </picture>
+              <h3 class="activity__label">Десктопные приложения</h3>
+            </li>
+            <li class="activity__item">
+              <picture>
+                <source
+                  srcset="./images/box2.jpg 1x, ./images/box2-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/box2.jpg" alt="box2" width="370" />
+              </picture>
+              <h3 class="activity__label">Мобильные приложения</h3>
+            </li>
+            <li class="activity__item">
+              <picture>
+                <source
+                  srcset="./images/box3.jpg 1x, ./images/box3-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/box3.jpg" alt="box3" width="370" />
+              </picture>
+              <h3 class="activity__label">Дизайнерские решения</h3>
+            </li>
+          </ul>
+        </div>
+      </section>
       <!-- Our team -->
       <section class="team">
         <div class="container">
           <h2 class="team__title title">Наша команда</h2>
           <ul class="team__list">
             <li class="personal-card">
-              <img
-                src="./images/demyanenko.jpg"
-                alt="Демьяненко"
-                width="100%"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/demyanenko.jpg    1x,
+                    ./images/demyanenko-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/demyanenko-tab.jpg    1x,
+                    ./images/demyanenko-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/demyanenko-mob.jpg    1x,
+                    ./images/demyanenko-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/demyanenko.jpg"
+                  alt="Демьяненко"
+                  width="100%"
+                />
+              </picture>
               <div class="personal-card__ident">
                 <h3 class="personal-card__surname">Игорь Демьяненко</h3>
                 <p class="personal-card__position">Product Designer</p>
@@ -325,7 +365,30 @@
               </div>
             </li>
             <li class="personal-card">
-              <img src="./images/repina.jpg" alt="Репина" width="100%" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/repina.jpg    1x,
+                    ./images/repina-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/repina-tab.jpg    1x,
+                    ./images/repina-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/repina-mob.jpg    1x,
+                    ./images/repina-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/repina.jpg" alt="Репина" width="100%" />
+              </picture>
               <div class="personal-card__ident">
                 <h3 class="personal-card__surname">Ольга Репина</h3>
                 <p class="personal-card__position">Frontend Developer</p>
@@ -360,7 +423,35 @@
               </div>
             </li>
             <li class="personal-card">
-              <img src="./images/tarasov.jpg" alt="Тарасов" width="100%" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/tarasov.jpg    1x,
+                    ./images/tarasov-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tarasov-tab.jpg    1x,
+                    ./images/tarasov-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/tarasov-mob.jpg    1x,
+                    ./images/tarasov-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/tarasov.jpg"
+                  alt="Тарасов"
+                  width="100%"
+                />
+              </picture>
+
               <div class="personal-card__ident">
                 <h3 class="personal-card__surname">Николай Тарасов</h3>
                 <p class="personal-card__position">Marketing</p>
@@ -395,7 +486,35 @@
               </div>
             </li>
             <li class="personal-card">
-              <img src="./images/ermakov.jpg" alt="Ермаков" width="100%" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/ermakov.jpg    1x,
+                    ./images/ermakov-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/ermakov-tab.jpg    1x,
+                    ./images/ermakov-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/ermakov-mob.jpg    1x,
+                    ./images/ermakov-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/ermakov.jpg"
+                  alt="Ермаков"
+                  width="100%"
+                />
+              </picture>
+
               <div class="personal-card__ident">
                 <h3 class="personal-card__surname">Михаил Ермаков</h3>
                 <p class="personal-card__position">UI Designer</p>

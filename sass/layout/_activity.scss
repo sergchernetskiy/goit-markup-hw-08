@@ -1,5 +1,10 @@
 .activity {
-  padding-bottom: var(--typical-padding-ident);
+  display: none;
+
+  @include desktop {
+    display: block;
+    padding-bottom: var(--typical-padding-ident);
+  }
 }
 
 .activity__title {

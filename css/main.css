@@ -1183,7 +1183,13 @@ ul {
 }
 
 .activity {
-  padding-bottom: var(--typical-padding-ident);
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .activity {
+    display: block;
+    padding-bottom: var(--typical-padding-ident);
+  }
 }
 
 .activity__title {
