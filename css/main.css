@@ -373,6 +373,12 @@ ul {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
 .contacts__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -414,7 +420,6 @@ ul {
   .contacts__link-bottom {
     padding-top: 32px;
     padding-bottom: 32px;
-    margin-left: 30px;
   }
 }
 
@@ -948,13 +953,6 @@ ul {
           align-items: center;
 }
 
-.mob-menu {
-  -webkit-transition: -webkit-transform 250ms var(--timing-function);
-  transition: -webkit-transform 250ms var(--timing-function);
-  transition: transform 250ms var(--timing-function);
-  transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
-}
-
 .mob-menu__container {
   position: fixed;
   top: 0;
@@ -1000,8 +998,10 @@ ul {
 }
 .is-open.mob-menu__icon-close {
   display: block;
-  -webkit-transition: fill 250ms var(--timing-function);
-  transition: fill 250ms var(--timing-function);
+  -webkit-transition: fill 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function), transform 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function), transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
 
 .mob-menu__icon-close:hover,
