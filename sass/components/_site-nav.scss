@@ -4,7 +4,12 @@
   gap: 50px;
   margin-left: 88px;
 
+  @media (max-width: 767px) {
+    display: none;
+  }
+
   @include tablet {
+    display: flex;
     margin-left: 93px;
   }
 }

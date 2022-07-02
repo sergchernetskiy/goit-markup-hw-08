@@ -3,7 +3,16 @@
   flex-direction: column;
   margin-left: auto;
 
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @include tablet {
+    display: block;
+  }
+
   @include desktop {
+    display: flex;
     flex-direction: row;
     margin-left: auto;
   }

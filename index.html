@@ -29,12 +29,25 @@
   </head>
   <body>
     <!-- Шапка страницы -->
-    <!--<header class="header">
+    <header class="header">
          <div class="container">
             <nav class="header__menu">
                <a href="./index.html" class="logo"
                   >Web<span class="logo__active">Studio</span></a
                >
+               <button
+                type="button"
+                class="menu__toggle"
+                aria-expanded="false"
+                aria-controls="mobile-menu">
+                  <svg
+                    width="40"
+                    height="40"
+                    aria-label="Переключатель мобильного меню">
+                    <use href="./images/icons.svg#mob-menu" class="mob-menu__icon  js-open-menu"></use>
+            </svg>
+          </button>
+          
                <ul class="site-nav list">
                   <li class="site-nav__item">
                      <a
@@ -84,11 +97,77 @@
                   >
                </li>
             </ul>
+            
          </div>
-      </header>-->
+      </header>
 
     <!-- Unique page content -->
     <main>
+      <div class="mob-menu__container js-menu-container" id="mobile-menu">
+        <button
+                type="button"
+                class="menu__toggle"
+                aria-expanded="false"
+                aria-controls="mobile-menu">
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню">
+              <use
+                href="./images/icons.svg#mob-menu-close"
+                class="mob-menu__icon-close js-close-menu">
+              </use>
+            </svg>
+          </button>
+        <ul class="mob-nav list">
+                  <li class="mob-nav__item">
+                     <a
+                        href="./index.html"
+                        class="mob-nav__link mob-nav__current"
+                        >Студия</a
+                     >
+                  </li>
+                  <li class="mob-nav__item">
+                     <a href="./portfolio.html" class="mob-nav__link"
+                        >Портфолио</a
+                     >
+                  </li>
+                  <li class="mob-nav__item">
+                     <a href="./contacts.html" class="mob-nav__link"
+                        >Контакты</a
+                     >
+                  </li>
+               </ul>
+            </nav>
+            <ul class="mob-contacts">
+               <li class="mob-contacts__item">
+                  <a
+                     href="mailto:info@devstudio.com"
+                     class="mob-contacts__link"
+                  >info@devstudio.com</a
+                  >
+               </li>
+               <li class="mob-contacts__item">
+                  <a href="tel:+380961111111" class="mob-contacts__link"
+                     >+380 96 111 1111</a
+                  >
+               </li>
+            </ul>
+        <ul class="social-mob__list">
+              <li class="social-mob__item">
+                <a href="/" class="social-mob__link link">Instagram</a>
+              </li>
+              <li class="social-mob__item">
+                <a href="/" class="social-mob__link link">Twitter</a>
+              </li>
+              <li class="social-mob__item">
+                <a href="/" class="social-mob__link link">Facebook</a>
+              </li>
+              <li class="social-mob__item">
+                <a href="/" class="social-mob__link link">LinkedIn</a>
+              </li>
+            </ul>
+      </div>
       <section class="hero">
         <div class="container">
           <h1 class="hero__title">
@@ -567,6 +646,13 @@
         </form>
       </div>
     </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

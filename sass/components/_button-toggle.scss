@@ -1,0 +1,14 @@
+.menu__toggle {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+
+  @include tablet {
+    display: none;
+  }
+}

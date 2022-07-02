@@ -1,13 +1,17 @@
 .header {
-   border-bottom-width: 1px;
-   border-bottom-style: solid;
-   border-bottom-color: #ececec;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ececec;
 
-   .container {
-      @include centeredFlex(flex, center, null);
-   }
+  .container {
+    @include centeredFlex(flex, center, null);
+  }
+  @media (max-width: 767px) {
+    width: 100vw;
+    height: 60px;
+  }
 }
 
 .header__menu {
-   @include centeredFlex(flex, center, null);
+  @include centeredFlex(flex, center, null);
 }

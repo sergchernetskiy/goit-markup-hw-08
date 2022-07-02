@@ -7,6 +7,8 @@
 
 @import "./components/container";
 @import "./components/logo";
+@import "./components/button-toggle";
+@import "./components/socials-mob-menu";
 @import "./components/button";
 @import "./components/button-filter";
 @import "./components/button-close";
@@ -21,6 +23,7 @@
 @import "./components/overlay";
 
 @import "./layout/header";
+@import "./layout/mobile-menu";
 @import "./layout/hero";
 @import "./layout/benefits";
 @import "./layout/activity";
