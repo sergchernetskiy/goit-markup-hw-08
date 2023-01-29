@@ -9,6 +9,8 @@
 
   text-decoration: none;
 
+  animation: fadeInDown 2s linear 1 0.1s;
+
   @include tablet {
     @include font(700, 26px, 1.19, null);
   }

@@ -16,6 +16,8 @@
 
 .site-nav__item {
   position: relative;
+
+  animation: fadeInDown 2s linear 1 0.2s;
 }
 
 .site-nav__link {
@@ -51,5 +53,7 @@
     left: 0;
     bottom: -1px;
     background-color: var(--color-bg-accent);
+
+    animation: opacity 2s linear 1 0.2s;
   }
 }

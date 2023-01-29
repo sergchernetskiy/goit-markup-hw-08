@@ -18,6 +18,10 @@
   }
 }
 
+.contacts__item {
+  animation: fadeInDown 2s linear 1 0.3s;
+}
+
 .contacts__item:not(:last-child) {
   @include desktop {
     margin-right: 30px;
